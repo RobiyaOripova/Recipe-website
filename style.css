@@ -1,0 +1,646 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans+Condensed:wght@300&family=Tangerine:wght@700&family=Taviraj:wght@200;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200&family=Libre+Franklin:wght@100&family=Nunito:wght@300;400&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-transform: capitalize;
+    letter-spacing: 0.2rem;
+}
+
+html {
+    font-size: 60.5%;
+}
+
+.mycontainer {
+    overflow-x: hidden;
+}
+
+.mycontainer h3 {
+    text-align: center;
+    color: #2b4270;
+    font-size: 3.3rem;
+    margin-bottom: 1.5rem;
+    font-family: "Open Sans Condensed", sans-serif;
+}
+
+.mycontainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mycontainer .mybtn {
+    border: none;
+    font-size: 2.2rem;
+    background: none;
+    margin-top: 0.7rem;
+    outline: 0;
+}
+
+.mycontainer .mybtn:hover {
+    transition: 0.5s;
+    color: #207ba8;
+    letter-spacing: 0.4rem;
+}
+
+.mycontainer .home {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.mycontainer .home .header-container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.mycontainer .home .header-container .logo {
+    padding-left: 1.5rem;
+}
+
+.mycontainer .home .header-container .logo h1 {
+    font-family: "Dancing Script", cursive;
+    font-weight: 600;
+    font-size: 3.5rem;
+}
+
+.mycontainer .home .header-container .logo h1 a {
+    color: #207ba8;
+    text-decoration: none;
+}
+
+.mycontainer .home .header-container .searchme {
+    position: relative;
+    left: 10%;
+    font-size: 2rem;
+    color: #207ba8;
+    display: none;
+}
+
+.mycontainer .home .header-container .xicon {
+    display: none;
+}
+
+.mycontainer .home .header-container form.formActive {
+    display: block;
+}
+
+.mycontainer .home .header-container form .search {
+    position: relative;
+    left: 4rem;
+    font-size: 2.2rem;
+    color: #207ba8;
+}
+
+.mycontainer .home .header-container form input[type=text] {
+    width: 300px;
+    outline: 0;
+    font-size: 2rem;
+    padding: 1rem;
+    padding-left: 5rem;
+    border-radius: 3rem;
+    border: none;
+    border: 1px solid #207ba8;
+}
+
+.mycontainer .home .header-container .navbar.active {
+    display: block;
+}
+
+.mycontainer .home .header-container .navbar ul {
+    display: flex;
+}
+
+.mycontainer .home .header-container .navbar ul li {
+    margin-left: 2.3rem;
+    font-size: 2rem;
+    font-family: "Taviraj", serif;
+    font-weight: 600;
+}
+
+.mycontainer .home .header-container .navbar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.mycontainer .home .header-container .navbar ul li a:hover {
+    transition: 0.5s;
+    color: #207ba8;
+}
+
+.mycontainer .home .back-image {
+    background-image: url("https://images.unsplash.com/photo-1615937722923-67f6deaf2cc9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 76rem;
+    position: relative;
+}
+
+.mycontainer .home .back-image .text {
+    background: #333;
+    opacity: 0.7;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 70%;
+    height: 30rem;
+}
+
+.mycontainer .home .back-image .text h2 {
+    padding-top: 7rem;
+    margin-bottom: 2.5rem;
+    font-size: 5rem;
+}
+
+.mycontainer .home .back-image .text p {
+    font-size: 3.5rem;
+}
+
+.mycontainer .m-cat {
+    margin-top: 6rem;
+}
+
+.mycontainer .m-cat,
+.mycontainer .m-area {
+    font-size: 2rem;
+    cursor: pointer;
+    font-family: "Taviraj", serif;
+    font-weight: 500;
+    width: 100%;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.mycontainer .m-cat .fas,
+.mycontainer .m-area .fas {
+    padding-right: 1rem;
+    color: #207ba8;
+}
+
+.mycontainer .m-cat span,
+.mycontainer .m-area span {
+    color: #207ba8;
+    font-weight: 600;
+}
+
+.mycontainer .category,
+.mycontainer .area {
+    padding: 1rem;
+    margin: 2rem;
+}
+
+.mycontainer .category ul,
+.mycontainer .area ul {
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.mycontainer .category ul li,
+.mycontainer .area ul li {
+    padding: 0.2rem;
+    margin-top: 10px;
+    color: #207ba8;
+    cursor: pointer;
+    font-size: 2.3rem;
+    transition: color 0.6s;
+}
+
+.mycontainer .category ul li:hover,
+.mycontainer .area ul li:hover {
+    color: #113b50;
+}
+
+.mycontainer .random {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.mycontainer .random .random-card {
+    width: 90% !important;
+    margin: 0 auto;
+    margin-bottom: 0;
+    border: none;
+    box-shadow: 1px 4px 17px 4px #eee;
+    height: 550px;
+}
+
+.mycontainer .random .random-card .c-img {
+    width: 75%;
+    height: 95%;
+    padding: 2rem;
+    right: 0;
+    object-fit: cover;
+}
+
+.mycontainer .random .c-body {
+    text-align: center;
+    height: 100px;
+    padding: 1rem;
+    width: 25%;
+    position: absolute;
+    top: 25rem;
+    right: 0;
+}
+
+.mycontainer .random .c-body .c-title {
+    font-size: 3rem;
+    margin-bottom: 1.3rem;
+    font-family: "Cormorant Garamond", serif;
+}
+
+.mycontainer .bottom .contact {
+    text-align: center;
+    color: #fff;
+    background: #111545;
+    height: 25rem;
+    width: 100%;
+}
+
+.mycontainer .bottom .contact h3 {
+    color: #fff;
+    padding-top: 3rem;
+}
+
+.mycontainer .bottom .contact .cons {
+    margin-top: 2.7rem;
+    font-size: 1.5rem;
+}
+
+.mycontainer .bottom footer {
+    width: 100%;
+    text-align: center;
+    background: #100924;
+    padding: 1rem;
+}
+
+.mycontainer .bottom footer p {
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+@media (max-width: 810.98px) {
+    html {
+        font-size: 47% !important;
+    }
+}
+
+@media (max-width: 610.98px) {
+    .mycontainer .home .back-image .text {
+        width: 98% !important;
+        padding: 0 1rem;
+    }
+    .mycontainer .home .back-image .text h2 {
+        font-size: 3.3rem;
+    }
+    .mycontainer .home .back-image .text p {
+        font-size: 2.3rem;
+    }
+    .mycontainer .category ul,
+    .mycontainer .area ul {
+        text-align: center;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 799.98px) {
+    .mycontainer .home .header-container .logo {
+        margin-left: 4rem;
+    }
+    .mycontainer .home .header-container .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50rem;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: none;
+        z-index: 100;
+        transition: all 1s;
+    }
+    .mycontainer .home .header-container .navbar ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 15%;
+    }
+    .mycontainer .home .header-container .navbar ul li {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        font-size: 3rem;
+    }
+    .mycontainer .home .header-container .navbar ul li a {
+        padding: 0 25px;
+        padding-bottom: 12px;
+        color: #fff;
+    }
+    .mycontainer .home .header-container .navbar-toggler {
+        display: block;
+        position: absolute;
+        height: 40px;
+        top: 5px;
+        left: 2rem;
+        background-color: transparent;
+        color: #207ba8;
+        z-index: 1000;
+        /* border: none; */
+        /* border-radius: 4px; */
+        outline: none;
+        padding: 0 5px;
+        cursor: pointer;
+    }
+    .mycontainer .home .header-container .navbar-toggler span,
+    .mycontainer .home .header-container .navbar-toggler span::before,
+    .mycontainer .home .header-container .navbar-toggler span::after {
+        display: block;
+        content: "";
+        background-color: #207ba8;
+        height: 3px;
+        width: 28px;
+        border-radius: 4px;
+        transition: all ease-in-out 0.3s;
+    }
+    .mycontainer .home .header-container .navbar-toggler span::before {
+        transform: translateY(-8px);
+    }
+    .mycontainer .home .header-container .navbar-toggler span::after {
+        transform: translateY(5px);
+    }
+    .mycontainer .home .header-container .navbar-toggler.open-navbar-toggler span {
+        /* transform: rotate(90deg); */
+        background-color: transparent;
+        /* transform: scale(0.85) rotate(270deg); */
+    }
+    .mycontainer .home .header-container .navbar-toggler.open-navbar-toggler span::before {
+        transform: translateY(0px) rotate(45deg);
+        /* transform: translateY(0px) scale(0.75) rotate(45deg); */
+    }
+    .mycontainer .home .header-container .navbar-toggler.open-navbar-toggler span::after {
+        transform: translateY(-3px) rotate(-45deg);
+        /* transform: translateY(-3px) scale(0.75) rotate(-45deg); */
+    }
+    .mycontainer .home .header-container .searchme {
+        z-index: 10000;
+        display: block;
+        margin-right: 2rem;
+        font-size: 3rem;
+    }
+    .mycontainer .home .header-container form {
+        background: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50rem;
+        z-index: 1000;
+        display: none;
+    }
+    .mycontainer .home .header-container form .search {
+        top: 4rem;
+        left: 2rem;
+        z-index: 1000;
+    }
+    .mycontainer .home .header-container form input[type=text] {
+        border: none;
+        border-radius: 0;
+        padding: 3rem;
+        position: absolute;
+        padding-left: 6rem;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        border-bottom: 1px solid #207ba8;
+    }
+    .mycontainer .random .random-card .c-img {
+        width: 100%;
+        height: 80%;
+    }
+    .mycontainer .random .c-body {
+        width: 100%;
+        height: 20%;
+        top: 58rem;
+    }
+    .mycontainer .contact {
+        padding: 2rem;
+    }
+}
+
+
+/*Category css*/
+
+.mycontainer .meal-container {
+    width: 100%;
+    margin-top: 10rem;
+}
+
+.mycontainer .meal-container .heading {
+    font-size: 4rem;
+    text-align: center;
+    margin: 1rem;
+    color: #7a7d22;
+    font-weight: 400;
+}
+
+.mycontainer .meal-container .heading h2 {
+    font-size: 3rem;
+}
+
+.mycontainer .meal-container .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    width: 90%;
+    margin: 3rem auto;
+    padding: 1rem;
+    height: auto;
+    position: relative;
+}
+
+.mycontainer .meal-container .card-container .meal-card {
+    box-shadow: 1px 2px 15px 5px #ddd;
+    margin: 1rem;
+    height: auto;
+}
+
+.mycontainer .meal-container .card-container .meal-card:hover {
+    transition: 0.5s;
+    box-shadow: 1px 2px 7px 2px #eee;
+}
+
+.mycontainer .meal-container .card-container .meal-card .image {
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.mycontainer .meal-container .card-container .meal-card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mycontainer .meal-container .card-container .meal-card .text {
+    height: auto;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.mycontainer .meal-container .card-container .meal-card .text h4 {
+    width: 80%;
+    font-weight: 300;
+    margin: 0 auto;
+    font-size: 3rem;
+    border-bottom: 0.2rem solid #000;
+    padding-bottom: 1.2rem;
+}
+
+.mycontainer .meal-container .card-container .meal-card .text .mybtn {
+    background: none;
+    border: none;
+    color: #c1c464;
+    font-size: 2rem;
+    margin-top: 0.7rem;
+    transition: 0.5s;
+    font-size: 2.7rem;
+    outline: none;
+}
+
+.mycontainer .meal-container .card-container .meal-card .text .btn:hover {
+    color: #7a7d22;
+    letter-spacing: 0.4rem;
+}
+
+
+/*Category css end*/
+
+
+/*İngredient css*/
+
+.mycontainer .recipe-container {
+    width: 95%;
+    height: auto;
+    margin: 1.3rem auto;
+    box-shadow: 1px 3px 15px 5px #eee;
+    padding: 1rem 0;
+    margin-top: 10rem;
+}
+
+.mycontainer .recipe-container h2 {
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 2rem;
+    font-size: 3rem;
+}
+
+.mycontainer .recipe-container .image {
+    width: 65%;
+    height: 60rem;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.mycontainer .recipe-container .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mycontainer .recipe-container .recipe-info {
+    width: 90%;
+    margin: 1rem auto;
+    text-align: center;
+    height: auto;
+    border: 1px solid #eee;
+    padding: 2rem 1rem;
+}
+
+.mycontainer .recipe-container .recipe-info h3 {
+    font-weight: 300;
+    font-family: "Nunito", sans-serif;
+    margin-bottom: 1.3rem;
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.mycontainer .recipe-container .recipe-info .ingredients {
+    height: auto;
+    margin-bottom: 4rem;
+}
+
+.mycontainer .recipe-container .recipe-info .ingredients ul {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-bottom: 1rem;
+}
+
+.mycontainer .recipe-container .recipe-info .ingredients ul li {
+    font-family: "Libre Franklin", sans-serif;
+    padding: 0.5rem 0;
+    letter-spacing: 1px;
+    margin: 0 1rem;
+    margin-bottom: 0.6rem;
+    text-transform: capitalize;
+    font-size: 2.2rem;
+}
+
+.mycontainer .recipe-container .recipe-info .description {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.mycontainer .recipe-container .recipe-info .description p {
+    line-height: 3.3rem;
+    letter-spacing: 1px;
+    font-size: 2rem;
+}
+
+@media (max-width: 699.98px) {
+    .mycontainer .recipe-container .image {
+        width: 90%;
+    }
+    .mycontainer .recipe-container .recipe-info .ingredients ul {
+        grid-template-columns: auto auto;
+    }
+}
+
+
+/*İngredient css end*/
+
+@media (max-width: 1199.98px) {
+    .mycontainer .home .back-image .text {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1399.98px) {
+    html {
+        font-size: 55%;
+    }
+}
